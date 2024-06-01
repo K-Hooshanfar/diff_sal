@@ -109,3 +109,8 @@ We provide the pretrained weights in this  [share link](https://drive.google.com
     year={2024}
   }
 ```
+
+
+# run from terminal:
+
+python -m torch.distributed.run --nproc_per_node=2 --master_port=25623 train_dhf1k.py  --multiprocessing_distributed  --config cfgs/diffusion.yml  --gpu_devices 0,1 --gpu 1 --data_type "dhf1k" --config_file cfgs/visual.py  --batch_size 1 --n_threads 2  --lr_scheduler MultiStepLR  --name "visual" --root_path "experiments_on_dhf1k/visual"  --train
