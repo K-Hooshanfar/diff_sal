@@ -27,7 +27,7 @@ config = dict(
     visual_net=dict(
         type=MViT,
         arch="small",
-        pretrained="/mnt/data4_8T/datasets/STAViS/data/pretrained_models/mvit-small-p244_16x4x1_kinetics400-rgb.pth",
+        pretrained="/code/Datasets/alireza_projects/video_saliency/diff_sal/pretrained_models/mvit-small-p244_16x4x1_kinetics400-rgb.pth",
         out_scales=[0, 1, 2, 3]),
     spatiotemp_net=None,
     decoder_net=dict(
@@ -72,7 +72,8 @@ config = dict(
 data_dict = {
     'dhf1k': {
         'type': DHF1KDatasetMultiFrames,
-        'path': 'VideoSalPrediction/DHF1k_extracted',
+        # 'path': 'VideoSalPrediction/DHF1k_extracted',
+        'path': '/code/Datasets/alireza_projects/video_saliency/visal/datasets/original_dataset/DHF1K_split/data/dhf1k',        
     },
     'holly': {
         'type': HollyDataset,
